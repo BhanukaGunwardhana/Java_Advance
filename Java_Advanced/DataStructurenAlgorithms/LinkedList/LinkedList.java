@@ -215,5 +215,41 @@ public class LinkedList <T>{
         check.setNext(null);
         this.last=check;*/
     }
+    public T findKthFromEnd(int k){
+        Node kth=first;
+        Node moving=first;
+        Node finalNode=first;
+        if(first!=null ){
+            if(first.equals(last)){System.out.println("List has one element");return null;}
+        int i=1;
+        while (i<=k){
+            
+            finalNode=moving;
+            if(moving==null){
+                System.out.println("Kth value is larger than the list size");
+                return null;   
+            }
+            moving=moving.getNext();
+            i++;
+        }
+        int index=0;
+        while(finalNode!=null){
+            if(finalNode.equals(last)){
+                return (T) kth.getValue();
+            }
+            finalNode=finalNode.getNext();
+            kth=kth.getNext();
+        }
+        return null;
+
+
+        }else{
+            System.out.println("Empty list");
+            return null;
+        }
+
+        
+
+    }
 
 }

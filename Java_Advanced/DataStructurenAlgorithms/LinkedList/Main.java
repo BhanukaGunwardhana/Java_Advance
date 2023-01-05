@@ -11,16 +11,17 @@ public class Main {
         list.addLast(2);
         list.addLast(3);
         //list.addMiddle(1, "S");
-        list.printList();
+        //list.printList();
         //System.out.println(list.contains(2)); 
         //System.out.println(list.getSize());
-        list._reverse();
+        //list._reverse();
         
-        Object[] arr= list.toArray();
+        //Object[] arr= list.toArray();
 
-        System.out.println(Arrays.toString( arr));
+        //System.out.println(Arrays.toString( arr));
         //list.deleteMiddle(1);
         //list.printList();
+        System.out.println(list.findKthFromEnd(4));
 
         
 
